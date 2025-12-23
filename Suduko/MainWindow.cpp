@@ -1,9 +1,9 @@
 #include "MainWindow.h"
 
 MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Sudoku Puzzle", wxDefaultPosition, windowSize) {
-	this->SetSize(wxSize(700, 700));
-	this->SetMinSize(wxSize(700, 700));
-	this->SetMaxSize(wxSize(700, 700));
+	this->SetSize(wxSize(600, 750));
+	this->SetMinSize(wxSize(600, 750));
+	this->SetMaxSize(wxSize(600, 750));
 
 	// Main sizer to hold everything
 	mainSizer = new wxBoxSizer(wxVERTICAL);
@@ -45,8 +45,8 @@ void MainWindow::ToolBar()
 		wxButton* btn = new wxButton(this, wxID_ANY, std::to_string(i),
 			wxDefaultPosition, btnSize);
 
-		toolBarSizer->Add(btn, 0, wxALL, 2);
+		toolBarSizer->Add(btn, 1, wxEXPAND | wxALL, 1);
 	}
 
-	mainSizer->Add(toolBarSizer, 0, wxALIGN_CENTER | wxALL, 1);
+	mainSizer->Add(toolBarSizer, 0, wxALIGN_CENTER | wxALL, 3);
 }

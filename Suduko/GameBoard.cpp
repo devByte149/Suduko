@@ -3,7 +3,7 @@
 GameBoard::GameBoard(wxWindow* parent) : wxPanel(parent, wxID_ANY)
 {
     // 1. Setup the Sizer for THIS panel
-    this->SetBackgroundColour(wxColor(255, 255, 255)); // White background
+    this->SetBackgroundColour(wxColor(225, 225, 225)); // White background
 
     // 2. Run the initialization
     InitGrid();
@@ -26,7 +26,7 @@ void GameBoard::InitGrid()
     puzzleGrid = new wxGridSizer(3, 3, 0, 0);
 
     for (int box = 0; box < 9; box++) {
-        wxGridSizer* innerBoxSizer = new wxGridSizer(3, 3, 0, 0);
+        wxGridSizer* innerBoxSizer = new wxGridSizer(3, 3, 1, 1);
 
         for (int cell = 0; cell < 9; cell++) {
             wxButton* btn = new wxButton(this, wxID_ANY, " ");
