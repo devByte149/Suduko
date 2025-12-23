@@ -15,7 +15,7 @@ private:
 
 	GameBoard* gameBoard = nullptr;
 	wxSize windowSize = wxSize(600, 600);
-	wxSize btnSize = wxSize((600/9), (600/9));
+	wxSize btnSize = wxSize(50, 50);
 
 	void ToolBar();
 };
